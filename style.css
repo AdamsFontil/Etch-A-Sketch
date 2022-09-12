@@ -9,17 +9,23 @@
     grid-gap: 0em;
     grid-template-rows: repeat(var(--grid-rows), 1fr);
     grid-template-columns: repeat(var(--grid-cols), 1fr);
+
   }
 
   .grid-item {
     padding: 1em;
     border: 1px solid #ddd;
     text-align: center;
+    max-width: .1px;
+    max-height: .1px;
+
   }
 
   .site {
     display: flex;
     gap: 50px;
+
+    /* background-color: yellow; */
   }
 
 
@@ -35,4 +41,28 @@
     flex-direction: column;
     justify-content: center;
     row-gap: 30px;
+    max-width: 100px;
+    /* background-color: red; */
+
+  }
+
+  .menu
+  :hover {
+    font-size: large;
+  }
+
+  .menu
+  :focus {
+    border-color: blue;
+    border-width: 3px;
+  }
+
+  .gridContainer {
+    color: 'red';
+    font-size: x-small;
+    /* background-color: blue; */
+    display: flex;
+    flex: 2;
+    max-width: 100px;
+    max-height: 100px;
   }
