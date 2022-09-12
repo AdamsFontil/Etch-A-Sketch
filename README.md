@@ -1,1 +1,2 @@
 # Etch-A-Sketch
+This is my first serious project. This is going to be a biggie because I don't imagine it being easy. But we soldier on. My plan for this task is to take my time to think about the problem, come up with a written plan, either on paper or through the README file to take on this project, and only use google to figure something specific in my plan that's not working out the way I want to. So let's begin.
