@@ -1,8 +1,8 @@
 :root {
     --grid-cols: 1;
     --grid-rows: 1;
-
   }
+
 
   .container {
     display: grid;

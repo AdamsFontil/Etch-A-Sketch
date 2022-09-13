@@ -1,6 +1,22 @@
 
 // creating divs is done
+const gridContainer = document.querySelector('.gridContainer')
 const container = document.querySelector(".container");
+const size = document.querySelector('.size')
+const clear = document.querySelector('.clear')
+const erase = document.querySelector('.erase')
+const hovered = document.querySelector('.hovered')
+
+
+function clearGrid () {
+    clear.addEventListener('click', () => {
+        for (elem of document.getElementsByClassName('grid-item')){
+            console.log('hi')
+            const gridItem = document.querySelector('.grid-item')
+            elem.style.backgroundColor = 'white'
+          }
+    });
+}
 
 function makeRows(rows, cols) {
   container.style.setProperty('--grid-rows', rows);
@@ -9,11 +25,24 @@ function makeRows(rows, cols) {
     let cell = document.createElement("div");
     // cell.innerText = (c + 1);
     container.appendChild(cell).className = "grid-item";
+    if ( 1 > 2) {
+        container.removeChild(cell).className = "grid-item";
+    }
+
     hover()
   };
 };
+
+
+
+
+// console.log(eraser())
+
+
+
+
 // rows = prompt('Size: ')
-rows = 30
+rows = 16
 makeRows(rows, rows);
 let color;
 
@@ -33,8 +62,19 @@ function rainbw() {  // this function will let the computer pick at random rock,
 
 
 function hover() {
-
 container.addEventListener('mouseover', (event) => {
     event.target.style.backgroundColor = 'black';
 });
 }
+
+
+
+function gridSize () {
+size.addEventListener('click',()  => {
+    rows = prompt('Size: ')
+    makeRows(rows, rows)
+});
+}
+
+console.log(clearGrid())
+gridSize()
