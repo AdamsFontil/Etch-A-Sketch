@@ -6,28 +6,40 @@ const size = document.querySelector('.size')
 const clear = document.querySelector('.clear')
 const erase = document.querySelector('.erase')
 const hovered = document.querySelector('.hovered')
+const gridItem = document.querySelector('.grid-item')
 
+rows = 16
 
 function clearGrid () {
-    clear.addEventListener('click', () => {
-        for (elem of document.getElementsByClassName('grid-item')){
-            console.log('hi')
-            const gridItem = document.querySelector('.grid-item')
-            elem.style.backgroundColor = 'white'
-          }
+    for (elem of document.getElementsByClassName('grid-item')){
+    console.log('cleargrid')
+    console.log(elem)
+    elem.style.backgroundColor = 'white'
+    }
+  }
+
+function removeGrid () {
+while (container.firstChild )container.removeChild(container.firstChild);
+    }
+
+
+
+erase.addEventListener('click', () => {
+  removeGrid()
+  });
+
+clear.addEventListener('click', () => {
+        clearGrid()
     });
-}
+
 
 function makeRows(rows, cols) {
   container.style.setProperty('--grid-rows', rows);
   container.style.setProperty('--grid-cols', cols);
   for (c = 0; c < (rows * cols); c++) {
     let cell = document.createElement("div");
-    // cell.innerText = (c + 1);
+    cell.innerText = (c + 1);
     container.appendChild(cell).className = "grid-item";
-    if ( 1 > 2) {
-        container.removeChild(cell).className = "grid-item";
-    }
 
     hover()
   };
@@ -42,7 +54,6 @@ function makeRows(rows, cols) {
 
 
 // rows = prompt('Size: ')
-rows = 16
 makeRows(rows, rows);
 let color;
 
@@ -71,10 +82,12 @@ container.addEventListener('mouseover', (event) => {
 
 function gridSize () {
 size.addEventListener('click',()  => {
+    cols = rows
     rows = prompt('Size: ')
+    clearGrid()
+    removeGrid()
     makeRows(rows, rows)
 });
 }
 
-console.log(clearGrid())
 gridSize()
