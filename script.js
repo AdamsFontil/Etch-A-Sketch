@@ -43,6 +43,9 @@ function gridSize () {
 size.addEventListener('click',()  => {
     cols = rows
     rows = prompt('Size: ')
+    if (rows > 100) { // size can't exceed 100
+      rows = 100
+    }
     clearGrid()
     removeGrid()
     makeRows(rows, rows)
