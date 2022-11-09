@@ -2,39 +2,30 @@
     --grid-cols: 1;
     --grid-rows: 1;
   }
-
-
   .container {
     display: grid;
-    grid-gap: 0em;
     grid-template-rows: repeat(var(--grid-rows), 1fr);
     grid-template-columns: repeat(var(--grid-cols), 1fr);
-
+    width: 600px;
+    height: 600px;
+    /* overflow: auto; */
   }
-
   .grid-item {
-    padding: 1em;
-    border: 1px solid #ddd;
-    text-align: center;
-    max-width: .1px;
-    max-height: .1px;
-
+    border: solid #ddd;
   }
-
   .site {
-    display: flex;
-    gap: 50px;
-
     /* background-color: yellow; */
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    gap: 100px;
+    max-width: 1100px;
+    margin: 0 auto;
   }
-
-
-
   h1 {
     display: flex;
     justify-content: center;
   }
-
   .menu {
     display: flex;
     flex: auto;
@@ -43,26 +34,13 @@
     row-gap: 30px;
     max-width: 100px;
     /* background-color: red; */
-
   }
-
   .menu
   :hover {
     font-size: large;
   }
-
   .menu
   :focus {
     border-color: blue;
     border-width: 3px;
-  }
-
-  .gridContainer {
-    color: 'red';
-    font-size: x-small;
-    /* background-color: blue; */
-    display: flex;
-    flex: 2;
-    max-width: 100px;
-    max-height: 100px;
   }

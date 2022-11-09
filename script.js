@@ -8,7 +8,7 @@ const erase = document.querySelector('.erase')
 const hovered = document.querySelector('.hovered')
 const gridItem = document.querySelector('.grid-item')
 
-rows = 16
+rows = 40
 
 function clearGrid () {
     for (elem of document.getElementsByClassName('grid-item')){
